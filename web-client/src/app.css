@@ -9,6 +9,7 @@
 html{
   font-size: 62,5%;
   background-color: white;
+  
 
 }
 
@@ -43,10 +44,11 @@ header{
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1rem;
   
 }
 
-.tarjeta::before{
+/*.tarjeta::before{
   content: "";
   position: absolute;
   height: 140px;
@@ -72,7 +74,7 @@ header{
   background-color: var(--mainBg-color);
   border-radius: 10%;
 
-}
+}*/
 
 
 .headerContainer__logo{
