@@ -7,3 +7,7 @@
  --purple:#473B81;
 }
 
+* {
+    margin:0;
+    padding:0;
+}
