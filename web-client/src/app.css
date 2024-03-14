@@ -1,16 +1,26 @@
 :root {
- --mainBg-color:#0E1626;
- --mainColor:#4C5AA4;
- --softYellow:#F8F4B7;
- --hardyellow:#E7D683;
- --pink:#EC6480;
- --purple:#473B81;
+  --mainBg-color: #0e1626;
+  --mainColor: #4c5aa4;
+  --softYellow: #f8f4b7;
+  --hardyellow: #e7d683;
+  --pink: #ec6480;
+  --purple: #473b81;
 }
-html{
-  font-size: 62,5%;
-  background-color: white;
-  
 
+@font-face {
+  font-family: 'MonumentRegular';
+  src: url('./assets/fonts/MonumentExtended-Regular.otf');
+}
+
+@font-face {
+  font-family: 'MonumentBold';
+  src: url('./assets/fonts/MonumentExtended-Ultrabold.otf');
+}
+
+html {
+  font-size: 62, 5%;
+  background-color: white;
+  font-family: 'MonumentRegular', sans-serif;
 }
 
 body {
@@ -19,33 +29,30 @@ body {
   padding: 1rem;
   background-color: var(--mainBg-color);
   height: 100vh;
-  
 }
-header{
+
+header {
   display: flex;
-  
-  
 }
+
 .headerContainer {
   background-color: transparent;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-left: 9rem;
-  
-   
 }
-.tarjeta{
+
+.tarjeta {
   height: 145px;
-  width: 200px;  
-  border-radius: 10%;  
+  width: 200px;
+  border-radius: 10%;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: 1rem;
-  
 }
 
 /*.tarjeta::before{
@@ -76,22 +83,20 @@ header{
 
 }*/
 
-
-.headerContainer__logo{
-height: 6rem;
-width: 6rem;
-padding: 1rem;
-margin: 0 auto;
-z-index: 2;
-border-radius: 10%;
+.headerContainer__logo {
+  height: 6rem;
+  width: 6rem;
+  padding: 1rem;
+  margin: 0 auto;
+  z-index: 2;
+  border-radius: 10%;
 }
-.headerContainer__title{
+.headerContainer__title {
   font-size: 1.5rem;
   color: white;
   animation: neon3 1.5s ease-in-out infinite alternate;
   position: absolute;
   z-index: 2;
-  
 }
 @keyframes neon3 {
   from {
@@ -103,16 +108,15 @@ border-radius: 10%;
       0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
   }
 }
-.headerContainer__button{
+.headerContainer__button {
   margin-left: 5rem;
   background-color: transparent;
   border: none;
   cursor: pointer;
 }
-.headerContainer__button--icon:hover{
-  border: 5px solid #F8F4B7;
-  box-shadow: 0 0 25px #F8F4B7;
+.headerContainer__button--icon:hover {
+  border: 5px solid #f8f4b7;
+  box-shadow: 0 0 25px #f8f4b7;
   transition: all 0.5s ease;
   border-radius: 50%;
 }
-
