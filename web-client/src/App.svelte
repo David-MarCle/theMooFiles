@@ -1,5 +1,5 @@
 <script>
-
+  import Header from "./lib/header/Header.svelte";
   import Map from "./lib/Map.svelte";
   export let ready;
 </script>
@@ -13,8 +13,8 @@
 </svelte:head>
 
 {#if ready}
-  <!-- <Header /> -->
-  <Map></Map>
+  <Header />
+  <Map/>
 {/if}
 
 <style>
