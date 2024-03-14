@@ -1,18 +1,6 @@
 <script>
   import logo from "../../assets/logo.png";
-  import Modal from './modal.svelte';
-
-  let showModal = false;
-
-  function toggleModal() {
-    showModal = !showModal;
-  }
-
-  let popupContent = '';
-
-  function closeModal() {
-    showModal = false;
-  }
+  
 </script>
 
 
@@ -26,10 +14,7 @@
       <h1 class="headerContainer__title">The Moo Files</h1>
    
    
-  </div>
-  <Modal isOpen={showModal} onClose={closeModal}>
-    {popupContent}
-  </Modal>
+  
 </header>
 
 

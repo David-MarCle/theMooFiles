@@ -1,5 +1,6 @@
 <script>
 import Header from "../src/lib/header/Header.svelte";
+import Footer from "./lib/footer/Footer.svelte";
   import Map from "./lib/Map.svelte";
   export let ready;
 </script>
@@ -15,6 +16,8 @@ import Header from "../src/lib/header/Header.svelte";
 {#if ready}
 <Header/>
   <Map></Map>
+  <Footer/>
+  
 {/if}
 
 <style>
