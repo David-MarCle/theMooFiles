@@ -1,6 +1,6 @@
 <script>
-  import logo from "../assets/logo.png";
-  import Modal from '../modal.svelte';
+  import logo from "../../assets/logo.png";
+  import Modal from './modal.svelte';
 
   let showModal = false;
 
@@ -41,4 +41,95 @@
 
 
 <style>
+  
+header {
+  display: flex;
+}
+
+.headerContainer {
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 9rem;
+}
+
+.tarjeta {
+  height: 145px;
+  width: 200px;
+  border-radius: 10%;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+/*.tarjeta::before{
+  content: "";
+  position: absolute;
+  height: 140px;
+  width: 200px;
+  background-image: conic-gradient(#ffdd1b 20deg, transparent 120deg);
+  animation: rotar 2s linear infinite;
+}
+
+@keyframes rotar{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(-360deg);
+  }
+}
+
+.tarjeta::after{
+  content: "";
+  position: absolute;
+  height: 140px;
+  width: 195px;
+  background-color: var(--mainBg-color);
+  border-radius: 10%;
+
+}*/
+
+.headerContainer__logo {
+  height: 6rem;
+  width: 6rem;
+  padding: 1rem;
+  margin: 0 auto;
+  z-index: 2;
+  border-radius: 10%;
+}
+.headerContainer__title {
+  font-size: 1.5rem;
+  color: white;
+  animation: neon3 1.5s ease-in-out infinite alternate;
+  position: absolute;
+  z-index: 2;
+}
+@keyframes neon3 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #ffdd1b,
+      0 0 70px #ffdd1b, 0 0 80px #ffdd1b, 0 0 100px #ffdd1b;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ffdd1b,
+      0 0 35px #ffdd1b, 0 0 40px #ffdd1b, 0 0 50px #ffdd1b, 0 0 75px #ffdd1b;
+  }
+}
+.headerContainer__button {
+  margin-left: 5rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.headerContainer__button--icon:hover {
+  border: 5px solid #f8f4b7;
+  box-shadow: 0 0 25px #f8f4b7;
+  transition: all 0.5s ease;
+  border-radius: 50%;
+}
+
 </style>
