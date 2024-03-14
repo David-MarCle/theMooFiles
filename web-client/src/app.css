@@ -25,14 +25,11 @@
 
 html {
   font-size: 62.5%;
-  background-color: white;
+  background-color: var(--mainBg-color);
   font-family: 'MonumentRegular', sans-serif;
 }
 
 body {
-  max-width: 500px;
-  margin: 0 auto; /* Centra el contenido en la página */
-  padding: 1rem;
   background-color: var(--mainBg-color);
   height: 100vh;
 }
