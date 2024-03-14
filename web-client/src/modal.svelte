@@ -51,7 +51,8 @@
   }
 
   .popup {
-    background-color: var(--mainColor);
+    background-color: transparent;
+    color: white;
     padding: 20px;
     border-radius: 4px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
@@ -76,6 +77,7 @@
 
   .close-button:hover {
     background-color: var(--purple);
+    color: white;
   }
   input {
     background-color: var(--softYellow);
@@ -87,5 +89,6 @@
   .close-button {
     background-color: transparent;
     border: none;
+    color: white;
   }
 </style>
