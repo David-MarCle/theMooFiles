@@ -1,4 +1,6 @@
 <script>
+  // @ts-nocheck
+  import iconMarker from "../assets/marker_icon.svg";
   import mapStyles from "./map-styles.js";
 
   let container;
@@ -12,22 +14,26 @@
     map = new google.maps.Map(container, {
       zoom,
       center,
-      styles: mapStyles
+      styles: mapStyles,
     });
 
-    
-      const marker = new google.maps.Marker({
-        position: { lat: 43.363129, lng: -5.951843 },
-        // icon: "./assets/marker.png"
+    const marker = new google.maps.Marker({
+      position: { lat: 43.363129, lng: -5.951843 },
+      icon: iconMarker,
+    });
+
+    marker.setMap(map);
+
+    marker.addListener("click", () => {
+      let infowindow = new google.maps.InfoWindow({
+        content: `Infomación de cada abducción`,
       });
 
-      marker.setMap(map);
+      infowindow.open(map, marker);
 
+    });
 
-
-    }
-  );
-
+  });
 </script>
 
 <div class="full-screen" bind:this={container}></div>

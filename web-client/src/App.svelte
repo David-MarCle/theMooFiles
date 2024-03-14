@@ -1,5 +1,5 @@
 <script>
-import Header from "../src/lib/header/Header.svelte";
+
   import Map from "./lib/Map.svelte";
   export let ready;
 </script>
@@ -13,7 +13,7 @@ import Header from "../src/lib/header/Header.svelte";
 </svelte:head>
 
 {#if ready}
-<Header/>
+  <!-- <Header /> -->
   <Map></Map>
 {/if}
 
@@ -21,5 +21,4 @@ import Header from "../src/lib/header/Header.svelte";
   :global(body) {
     padding: 0;
   }
-
 </style>
