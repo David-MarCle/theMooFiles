@@ -1,4 +1,5 @@
 <script>
+
   import Map from "./lib/Map.svelte";
   export let ready;
 </script>
@@ -19,4 +20,5 @@
   :global(body) {
     padding: 0;
   }
+
 </style>
