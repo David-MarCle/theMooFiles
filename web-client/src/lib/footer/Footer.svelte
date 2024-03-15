@@ -70,5 +70,6 @@
     height: 4rem;
     background-color: transparent;
     border: none;
+    cursor: pointer;
   }
 </style>
