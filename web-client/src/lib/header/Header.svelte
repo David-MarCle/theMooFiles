@@ -1,28 +1,16 @@
 <script>
   import logo from "../../assets/logo.png";
-  import Modal from "./modal.svelte";
-
-  let showModal = false;
-
-  function toggleModal() {
-    showModal = !showModal;
-  }
-
-  let popupContent = "";
-
-  function closeModal() {
-    showModal = false;
-  }
+  
 </script>
 
 <header>
   <div class="headerContainer">
-    <img class="headerContainer__logo" src={logo} alt="" />
-    <h1 class="headerContainer__title">The Moo Files</h1>
-  </div>
-  <Modal isOpen={showModal} onClose={closeModal}>
-    {popupContent}
-  </Modal>
+    
+      <img class="headerContainer__logo" src={logo} alt="" />
+      <h1 class="headerContainer__title">The Moo Files</h1>
+   
+   
+  
 </header>
 
 <style>
@@ -41,13 +29,6 @@
     );
   }
 
-  /*.headerContainer {
-  background-color: transparent;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 9rem;
-}*/
 
   .headerContainer {
     width: 100vw;
@@ -57,33 +38,7 @@
     margin-top: 5rem;
   }
 
-  /*.tarjeta::before{
-  content: "";
-  position: absolute;
-  height: 140px;
-  width: 200px;
-  background-image: conic-gradient(#ffdd1b 20deg, transparent 120deg);
-  animation: rotar 2s linear infinite;
-}
 
-@keyframes rotar{
-  from{
-      transform: rotate(0deg);
-  }
-  to{
-      transform: rotate(-360deg);
-  }
-}
-
-.tarjeta::after{
-  content: "";
-  position: absolute;
-  height: 140px;
-  width: 195px;
-  background-color: var(--mainBg-color);
-  border-radius: 10%;
-
-}*/
 
   .headerContainer__logo {
     height: 6rem;
