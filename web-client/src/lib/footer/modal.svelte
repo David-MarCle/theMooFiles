@@ -5,6 +5,31 @@
   function closeModal() {
     onClose();
   }
+
+  let latitude = '' ;
+  let longitude = '';
+  let name = '';
+  let place = '';
+  let description = '';
+  let photo = '';
+
+  let handleSubmit = () => {
+    const endpoint = "http://localhost:8000/api/abductions"
+    let data = new FormData()
+    data.append ('latitude', latitude)
+    data.append ('longitude', longitude)
+    data.append ('name  ', name)
+    data.append ('place', place)
+    data.append ('description', description)
+    data.append ('photo', photo)
+
+    fetch(endpoint, {method: 'POST', body: data}).then(response => response.json()).then(data => {
+      
+    }
+
+
+  }
+
 </script>
 
 <div class="modal" class:open={isOpen} on:click={closeModal}>
@@ -12,30 +37,29 @@
     <div class="popup-content">
       <button class="close-button" on:click={closeModal}>X</button>
       <form>
-
-        <label for="name">Latitude:</label>
+        <label for="latitude">Latitude:</label>
         <input
           type="text"
-          id="name"
-          name="Name"
+          id="latitude"
+          name="latitude"
           required
           placeholder="Latitude"
-        />
+        /> 
 
-        <label for="name">Longitude:</label>
+        <label for="longitude">Longitude:</label>
         <input
           type="text"
-          id="name"
-          name="Name"
+          id="longitude"
+          name="longitude"
           required
           placeholder="Longitude"
         />
 
-        <label for="name">Name:</label>
+        <label for="animal-name">Name:</label>
         <input
           type="text"
-          id="name"
-          name="Name"
+          id="animal-name"
+          name="animal-name"
           required
           placeholder="Animal name"
         />
@@ -49,9 +73,10 @@
           placeholder="Place"
         />
 
-        <label for="mensaje">Description:</label>
+        <label for="description">Description:</label>
         <textarea id="description" name="description" required></textarea>
-        <label for="name">Photo:</label>
+
+        <label for="photo">Photo:</label>
         <input
           type="url"
           id="photo"
@@ -63,8 +88,7 @@
         <button class="button__submit" type="submit">Submit</button>
       </form>
     </div>
-    
-  </div>
+  </div> 
 </div>
 
 <style>
@@ -107,7 +131,6 @@
     font-size: 14px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
   }
 
   .close-button:hover {
@@ -118,26 +141,25 @@
     flex-direction: column;
     align-items: start;
     gap: 1rem;
-    color:white;
+    color: white;
   }
-  input{
-    background-color: var(--softYellow);
-    border: none;
-    
-  }
-  
-  textarea{
+  input {
     background-color: var(--softYellow);
     border: none;
   }
-  ::placeholder{
+
+  textarea {
+    background-color: var(--softYellow);
+    border: none;
+  }
+  ::placeholder {
     padding-left: 1rem;
   }
-  .button__submit{
-background-color: var(--mainColor);
-padding:.5rem;
-width: 16.5rem;
-margin-top: 2rem;
-color: white;
+  .button__submit {
+    background-color: var(--mainColor);
+    padding: 0.5rem;
+    width: 16.5rem;
+    margin-top: 2rem;
+    color: white;
   }
 </style>
