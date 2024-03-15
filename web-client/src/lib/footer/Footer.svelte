@@ -52,16 +52,20 @@
 
 <style>
   footer {
-    background: rgb(2,0,36);
-background: linear-gradient(0deg, rgba(2,0,36,1) 0%, rgba(14,22,38,0.908000700280112) 73%, rgba(0,212,255,0) 100%);
+    background: rgb(2, 0, 36);
+    background: linear-gradient(
+      0deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(14, 22, 38, 0.908000700280112) 73%,
+      rgba(0, 212, 255, 0) 100%
+    );
     position: absolute;
-    top: 98%;
+    bottom:0;
     width: 100%;
     display: flex;
     justify-content: center;
   }
-  .footerContainer {
-  }
+
   .footerContainer__button {
     height: 4rem;
     background-color: transparent;
