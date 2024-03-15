@@ -1,9 +1,10 @@
 <script>
-  import Header from "./lib/header/Header.svelte";
+  import Header from "../src/lib/header/Header.svelte";
+  import Footer from "./lib/footer/Footer.svelte";
   import Map from "./lib/Map.svelte";
 
   export let ready;
-  import {API_KEY} from "../password.js"
+  import { API_KEY } from "../password.js";
 </script>
 
 <svelte:head>
@@ -16,7 +17,8 @@
 
 {#if ready}
   <Header />
-  <Map />
+  <Map></Map>
+  <Footer />
 {/if}
 
 <style>
