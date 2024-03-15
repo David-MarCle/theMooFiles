@@ -26,13 +26,13 @@ python manage.py runserver
 
 
 
-## Install Django
-### Mac y windows
+## Otros comandos a tener en cuenta:
+**Instalar django Mac y windows**
 ```
 pip install django
 ```
 
-### CORS - CrossOrigin 
+**CORS - CrossOrigin**
 ```
 pip install django-cors-headers
 ```
