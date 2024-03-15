@@ -8,7 +8,7 @@
   <script
     defer
     async
-    src="https://maps.googleapis.com/maps/api/js?key=API_KEYg&callback=initMap"
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyABqa2tOxdpzPs_8-bXbBkizldNQ-EvJlY&callback=initMap"
   ></script>
 </svelte:head>
 
